@@ -1,0 +1,8 @@
+[msg,Fs] = audioread('signal_0.wav');
+subplot(2, 2, 1);
+plot(msg);
+% sound(msg,Fs);
+subplot(2, 2, 2);
+X = find(abs(msg)>0.85);
+msg(X) = 0;
+plot(msg).;
